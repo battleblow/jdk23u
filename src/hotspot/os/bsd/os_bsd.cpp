@@ -124,6 +124,9 @@
 #ifdef __APPLE__
   #include <mach/task_info.h>
   #include <mach-o/dyld.h>
+  // needed by current_stack_base_and_size() workaround for Mavericks
+  #define DEFAULT_MAIN_THREAD_STACK_PAGES 2048
+  #define OS_X_10_9_0_KERNEL_MAJOR_VERSION 13
 #endif
 
 #ifndef MAP_ANONYMOUS
